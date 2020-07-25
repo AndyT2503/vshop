@@ -67,6 +67,7 @@ class ProductFilter extends Component {
                 ) {
                     return product;
                 }
+                return null;
             });
         }
 

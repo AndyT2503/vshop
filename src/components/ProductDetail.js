@@ -18,6 +18,7 @@ class ProductDetail extends Component{
         this.setState({
             data: description,
         })
+        sessionStorage.setItem(id, description);
     }
 
     componentDidMount(){
@@ -25,7 +26,14 @@ class ProductDetail extends Component{
         var str = window.location.href;
         str = str.split("/");
         var id = str[4];
-        this.getInfor(id);
+        if(sessionStorage.getItem(id)){
+            this.setState({
+                data: sessionStorage.getItem(id)
+            })
+        }
+        else{
+            this.getInfor(id);
+        }
     }
     render(){
 

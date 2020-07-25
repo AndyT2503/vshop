@@ -13,9 +13,9 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            products: Array(),
+            products: [],
             keyword: "",
-            cart: Array(),
+            cart: [],
         };
     }
 
